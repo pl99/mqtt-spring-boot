@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+mqtt:
+  uris:
+#    - tcp://localhost:1883
+    - tcp://adv-ump-ai-srv01.adv:1883
+#  username: user
+#  password: password
+  client-id: my-example-app-client
+  default-publish-topic: app/events/default
+  subscription-topics:
+    - app/commands/#
+    - system/notifications
+  subscription-qos:
+    - 1
+    - 2
+
